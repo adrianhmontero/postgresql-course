@@ -16,3 +16,13 @@ SELECT
 FROM
 	country a
 	FULL OUTER JOIN continent b ON a.continent = b.code;
+
+SELECT
+	a."name" AS country,
+	a.continent AS continent_code,
+	b."name" AS continent_name
+FROM
+	country a
+	RIGHT JOIN continent b ON a.continent = b.code
+WHERE
+	a.continent IS NULL;

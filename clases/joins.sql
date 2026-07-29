@@ -8,3 +8,11 @@ SELECT
 FROM
 	country a
 	INNER JOIN continent b ON a.continent = b.code;
+
+SELECT
+	a."name" AS country,
+	a.continent AS continent_code,
+	b."name" AS continent_name
+FROM
+	country a
+	FULL OUTER JOIN continent b ON a.continent = b.code;
